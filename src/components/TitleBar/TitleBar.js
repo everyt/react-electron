@@ -14,7 +14,7 @@ function TitleBar() {
 
   ipcRenderer.on('maximizeAppReply', () => {
     if (icon === 'fa-regular fa-square fa-xs') {
-      setIcon('fa-regular fa-square fa-xs fa-spin fa-spin-reverse');
+      setIcon('fa-regular fa-window-restore fa-xs');
     } else {
       setIcon('fa-regular fa-square fa-xs');
     }
