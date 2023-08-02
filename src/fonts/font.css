@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'YD-B';
+  src: url('./Yeongdeok-Blueroad.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'YD-H';
+  src: url('./Yeongdeok-Haeparang.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'YD-S';
+  src: url('./Yeongdeok-Sea.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'YD-SC';
+  src: url('./Yeongdeok-Snow-Crab.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}

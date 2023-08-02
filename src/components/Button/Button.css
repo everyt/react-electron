@@ -1,0 +1,14 @@
+.btn {
+  -webkit-app-region: no-drag;
+}
+.btn--title {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 15px;
+}
+.btn--exit {
+  margin-right: 5px;
+}
+.btn--title:hover {
+  background-color: #eeeeee;
+}

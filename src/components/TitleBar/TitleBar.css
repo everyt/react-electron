@@ -1,0 +1,21 @@
+:root {
+  font-family: 'YD-H';
+  font-size: 18px;
+}
+.titleBar {
+  float: left;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 20px;
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-bottom: 7px;
+}
+.titleUnderLine {
+  width: 100%;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+}
