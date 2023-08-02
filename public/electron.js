@@ -12,8 +12,8 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'),
     },
     frame: false,
-    resizable: false,
   });
+  win.webContents.openDevTools();
   win.removeMenu();
 
   const startUrl =
@@ -28,7 +28,8 @@ function createWindow() {
   ipcMain.on('minimizeApp', () => {
     win.minimize();
   });
-  ipcMain.on('maximizeApp', () => {
+  ipcMain.on('maximizeApp', (event) => {
+    event.reply('maximizeAppReply');
     if (win.isMaximized()) {
       win.restore();
     } else {

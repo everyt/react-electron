@@ -1,39 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '../../components';
-import { ipcSend } from '../../components';
 
 import './TitleBar.css';
 
 const { ipcRenderer } = window.require('electron');
 
-function ipcSend(message) {
-  ipcRenderer.send(message);
-}
-
 function TitleBar() {
+  const [icon, setIcon] = useState('fa-regular fa-square fa-xs');
+
+  const ipcSend = (channel) => {
+    ipcRenderer.send(channel, 'onClick');
+  };
+
+  ipcRenderer.on('maximizeAppReply', () => {
+    if (icon === 'fa-regular fa-square fa-xs') {
+      setIcon('fa-regular fa-square fa-xs fa-spin fa-spin-reverse');
+    } else {
+      setIcon('fa-regular fa-square fa-xs');
+    }
+  });
+
   return (
     <>
       <div className='titleBar'>
         <Button
-          type='btn--title'
-          id='btn--exit'
-          onClick={ipcSend('closeApp')}
+          parrent='btn--title'
+          type='btn--exit'
+          onClick={() => ipcSend('closeApp')}
         >
-          <i class='fa-solid fa-xmark fa-xs'></i>
+          <i className='fa-solid fa-xmark fa-xs'></i>
         </Button>
         <Button
-          type='btn--title'
-          id='btn--max'
-          onClick={ipcSend('maximizeApp')}
+          parrent='btn--title'
+          type='btn--max'
+          onClick={() => ipcSend('maximizeApp')}
         >
-          <i class='fa-regular fa-square fa-2xs'></i>
+          <i className={icon}></i>
         </Button>
         <Button
-          type='btn--title'
-          id='btn--min'
-          onClick={ipcSend('minimizeApp')}
+          parrent='btn--title'
+          type='btn--min'
+          onClick={() => ipcSend('minimizeApp')}
         >
-          <i class='fa-solid fa-minus fa-2xs'></i>
+          <i className='fa-solid fa-minus fa-2xs'></i>
         </Button>
         <div className='titleString'>심연의 바다</div>
       </div>

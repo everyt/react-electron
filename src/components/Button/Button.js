@@ -1,9 +1,14 @@
 import React from 'react';
 import './Button.css';
 
-function Button({ children, type, id, onClick }) {
+function Button({ children, parrent, type, onClick }) {
   return (
-    <div className={`btn ${type} ${id}`} onClick={() => {{onClick}}}>{children}</div>
+    <div
+      className={`btn ${parrent} ${type}`}
+      onClick={onClick}
+    >
+      {children}
+    </div>
   );
 }
 
