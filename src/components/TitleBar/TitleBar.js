@@ -28,7 +28,7 @@ function TitleBar() {
           type='btn--exit'
           onClick={() => ipcSend('closeApp')}
         >
-          <i className='fa-solid fa-xmark fa-xs'></i>
+          <i className='fa-solid fa-xmark fa-sm'></i>
         </Button>
         <Button
           parrent='btn--title'
@@ -42,9 +42,8 @@ function TitleBar() {
           type='btn--min'
           onClick={() => ipcSend('minimizeApp')}
         >
-          <i className='fa-solid fa-minus fa-2xs'></i>
+          <i className='fa-solid fa-minus fa-sm'></i>
         </Button>
-        <div className='titleString'>심연의 바다</div>
       </div>
       <div className='titleUnderLine'></div>
     </>

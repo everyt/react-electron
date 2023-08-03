@@ -37,7 +37,7 @@ function createWindow() {
     }
   });
   ipcMain.on('closeApp', () => {
-    win.close();
+    // win.close();
   });
 }
 app.whenReady().then(() => {

@@ -1,14 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Button.css';
 
-function Button({ children, parrent, type, onClick }) {
+function Button({ children, parrent, type, onClick, link }) {
   return (
-    <div
-      className={`btn ${parrent} ${type}`}
-      onClick={onClick}
-    >
-      {children}
-    </div>
+    <Link to={link}>
+      <div className={`btn ${parrent} ${type}`} onClick={onClick}>
+        {children}
+      </div>
+    </Link>
   );
 }
 
