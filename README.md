@@ -13,9 +13,3 @@ troubleShooting: React의 최신 버전과 호환성 문제가 상당히 포진�
 SASS:
 implementingReason: 반복적이고 직관적이지 않은 기존의 CSS의 생산성을 향상시키기 위해서
 troubleShooting: 사용하기 위해서 빌드해줘야 하는데, 그럴때마다 동일한 이름의 _.css파일과 _.css.map 파일이 생겨나 너무 번거로워서 .vscode/settings.json 파일에서 숨겨지도록 설정했습니다.
-
-jquery:
-implementingReason: 비인간적인 기존의 DOM 이벤트 처리를 대체하기 위해서
-window.addEventListener('click', (e) => {}); 앞의 코드를
-$('window').on('click', (e) => {}); 처럼 대체할 수 있었습니다.
-훨씬 알아보기 편한 코드 가독성 덕분에 개발이 편해졌습니다.

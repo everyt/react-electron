@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useInterval } from '../../hooks';
-import $ from 'jquery';
 
 import './DialogBox.css';
 
@@ -37,7 +36,7 @@ function DialogBox({ name, children, data, setData }) {
     isRunning === true ? delay : null
   );
 
-  $('window').on('click', (e) => {
+  window.addEventListener('click', (e) => {
     e.preventDefault();
     isRunning ? setData('skip') : setData('next');
   });
@@ -47,7 +46,10 @@ function DialogBox({ name, children, data, setData }) {
       <div className='dialogBox-container'>
         {name && <div className='dialogBox-name'>{name}</div>}
         <div className='dialogBox-main'>
-          <div className='dialogBox-text'>{text}</div>
+          <div className='dialogBox-text'>
+            {text}
+            {data}
+          </div>
         </div>
       </div>
     </div>

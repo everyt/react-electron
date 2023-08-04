@@ -9,8 +9,12 @@ function StoryPage() {
   const [data, setData] = useState('initial data');
   return (
     <div>
-      <DialogBox name={name} data={data} setData={setData}>
-        아리가또
+      <DialogBox
+        name={name}
+        data={data}
+        setData={setData}
+      >
+        아리가또sadasdds
       </DialogBox>
     </div>
   );
