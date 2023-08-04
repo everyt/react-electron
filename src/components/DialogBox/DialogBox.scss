@@ -1,0 +1,36 @@
+@import '../../App.scss';
+
+.dialogBox-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dialogBox-container {
+  font-family: 'YD-B';
+  font-size: 3vh;
+  height: 94vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.dialogBox-name {
+  height: 7vh;
+  width: 20%;
+  border: 1px solid $MainColor;
+  border-radius: 3vh;
+  margin-bottom: 1vh;
+}
+
+.dialogBox-main {
+  height: 35vh;
+  width: inherit;
+  border: 1px solid $MainColor;
+  border-radius: 3vh;
+}

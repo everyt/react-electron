@@ -1,1 +1,2 @@
-export { default as MainMenu } from './MainMenu/MainMenu';
+export { default as MainMenuPage } from './MainMenuPage/MainMenuPage';
+export { default as StoryPage } from './StoryPage/StoryPage';

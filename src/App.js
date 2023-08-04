@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { TitleBar } from './components';
-import { MainMenu } from './pages';
+import { MainMenuPage } from './pages';
+import { StoryPage } from './pages';
 
 import './App.css';
 
@@ -10,7 +11,8 @@ function App() {
     <Router>
       <TitleBar />
       <Routes>
-        <Route path='/' exact Component={MainMenu} />
+        <Route path='/123' exact Component={MainMenuPage} />
+        <Route path='/' exact Component={StoryPage} />
       </Routes>
     </Router>
   );

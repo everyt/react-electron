@@ -1,4 +1,4 @@
-let { ipcRenderer } = require('electron');
+const { ipcRenderer } = require('electron');
 
 process.once('loaded', () => {
   window.ipcRenderer = ipcRenderer;

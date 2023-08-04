@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '../../components';
 
-import './MainMenu.css';
+import './MainMenuPage.css';
 
 const { ipcRenderer } = window.require('electron');
 

@@ -1,0 +1,8 @@
+.mainmenu-container {
+  height: 85vh;
+  width: 98vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=MainMenuPage.css.map */

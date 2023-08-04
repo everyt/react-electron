@@ -7,7 +7,8 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "global": "^4.4.0",
+    "electron-extension-installer": "^1.2.0",
+    "jquery": "^3.7.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
@@ -19,13 +20,16 @@
     "electron:start": "SET ELECTRON_START_URL=http://127.0.0.1:3000 && wait-on http://127.0.0.1:3000 && electron .",
     "react:start": "react-scripts start",
     "react:build": "react-scripts build",
-    "build": "npm run react:build && electron-builder --publish=always"
+    "build": "npm run react:build && electron-builder --publish=always",
+    "build:sass": "sass src:dist",
+    "watch:sass": "sass --watch src:dist"
   },
   "build": {
     "appId": "com.example.electron-app",
     "files": [
       "build/**/*",
-      "node_modules/**/*"
+      "node_modules/**/*",
+      "!.vscode${/*}"
     ],
     "directories": {
       "buildResources": "assets"
@@ -55,6 +59,7 @@
     "electron": "^25.3.2",
     "electron-builder": "^24.6.3",
     "react-router-dom": "^6.14.2",
+    "sass": "^1.64.2",
     "wait-on": "^7.0.1"
   }
 }

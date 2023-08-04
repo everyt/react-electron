@@ -1,12 +1,9 @@
-body {
-  background-color: #fefefe;
-}
+@import '../../App.scss';
 
 :root {
-  font-family: "YD-H";
+  font-family: 'YD-H';
   font-size: 1.2rem;
 }
-
 .titleBar {
   float: left;
   display: flex;
@@ -15,14 +12,12 @@ body {
   height: 20px;
   -webkit-app-region: drag;
   -webkit-user-select: none;
-  -moz-user-select: none;
-       user-select: none;
+  user-select: none;
   padding-bottom: 7px;
 }
-
 .titleUnderLine {
   width: 100%;
-  border: 1px solid #cccccc;
+  border: 1px solid $SubColor;
   display: flex;
   flex-direction: column;
-}/*# sourceMappingURL=TitleBar.css.map */
+}

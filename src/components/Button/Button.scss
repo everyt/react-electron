@@ -1,46 +1,35 @@
-@charset "UTF-8";
-body {
-  background-color: #fefefe;
-}
+@import '../../App.scss';
 
 a {
   /* Link 태그는 클릭시 a 태그로 작동합니다. */
   text-decoration: none;
 }
-
 .btn {
   -webkit-app-region: no-drag;
 }
-
 .btn--title {
-  color: #333333;
+  color: $MainColor;
   padding-left: 4px;
   padding-right: 4px;
   margin-left: 4px;
   margin-right: 4px;
 }
-
 .btn--title:visited {
   color: gainsboro;
 }
-
 .btn--title:hover {
   color: gainsboro;
 }
-
 .btn--min {
   margin-left: 15px;
 }
-
 .btn--exit {
   margin-right: 4px;
 }
-
 .btn--main {
   text-align: center;
-  font-family: "YD-S";
+  font-family: 'YD-S';
 }
-
 .btn--main {
-  color: #333333;
-}/*# sourceMappingURL=Button.css.map */
+  color: $MainColor;
+}
