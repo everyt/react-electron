@@ -5,6 +5,8 @@ const {
   REACT_DEVELOPER_TOOLS,
 } = require('electron-extension-installer');
 
+const url = require('url');
+
 app.on('ready', async () => {
   await installExtension(REACT_DEVELOPER_TOOLS, {
     loadExtensionOptions: {
@@ -50,7 +52,7 @@ function createWindow() {
     }
   });
   ipcMain.on('closeApp', () => {
-    // win.close();
+    win.close();
   });
 }
 app.whenReady().then(() => {

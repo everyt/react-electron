@@ -21,10 +21,10 @@ function DialogBox({ name, children, data, setData }) {
   }, 50);
 
   const typing = () => {
-    setDelay(400);
+    setDelay(data === 'skip' ? 1 : 400);
+    if (skipDictionary.indexOf(children[text.length]) >= 0) setDelay(10);
     if (children[text.length] !== undefined)
       setText((previousText) => previousText + children[text.length]);
-    if (skipDictionary.indexOf(children[text.length]) >= 0) setDelay(10);
     if (text.length >= children.length) {
       setisRunning(false);
     }
@@ -33,7 +33,7 @@ function DialogBox({ name, children, data, setData }) {
     () => {
       typing();
     },
-    isRunning === true ? delay : null
+    isRunning === true ? delay : null,
   );
 
   window.addEventListener('click', (e) => {

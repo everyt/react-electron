@@ -11,8 +11,16 @@ function App() {
     <Router>
       <TitleBar />
       <Routes>
-        <Route path='/123' exact Component={MainMenuPage} />
-        <Route path='/' exact Component={StoryPage} />
+        <Route
+          path='/'
+          exact
+          Component={MainMenuPage}
+        />
+        <Route
+          path='/story'
+          exact
+          Component={StoryPage}
+        />
       </Routes>
     </Router>
   );
